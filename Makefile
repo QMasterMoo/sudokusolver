@@ -1,0 +1,1 @@
+g++ sudoku.cpp grid.cpp -o sudoku
