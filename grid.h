@@ -10,12 +10,12 @@
 using namespace std;
 
 const int BOARD_SIZE = 9;
+const int BOARD_SQR  = 3;
 
 class Grid{
 
 private:
-    char board[BOARD_SIZE][BOARD_SIZE];
-    int emptyCount;
+    int board[BOARD_SIZE][BOARD_SIZE];
 
     //test if rowNum is a valid row
     bool validRow(int rowNum, bool countX = false);
@@ -44,11 +44,11 @@ public:
 
     void loadBoard(string &fileName);
 
-    void setElement(char val, int row, int col);
+    void setElement(int val, int row, int col);
     
-    void setElement(char val, int idx);
+    void setElement(int val, int idx);
 
-    bool eltIsNumeric(int idx);
+    bool eltExist(int idx);
 
     void solve();
 

@@ -41,7 +41,7 @@ void genPerms(Grid g, int idx){
     }
 
     //if the element is numeric
-    if (g.eltIsNumeric(idx)){
+    if (g.eltExist(idx)){
 
         genPerms(g, idx + 1);
         return;
@@ -51,7 +51,8 @@ void genPerms(Grid g, int idx){
 
     //try everything
     for (int i = 0; i < BOARD_SIZE; ++i){
-        g.setElement((char)(i + '1'), idx);
+
+        g.setElement(i + 1, idx);
         genPerms(g, idx + 1);
     }
 
